@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import axios from "axios";
 
 function App() {
   const api = {
@@ -46,7 +45,7 @@ function App() {
       }
     };
     fetchWeatherData();
-  }, [searchCity]);
+  }, [searchCity, api.APIKey, api.url]);
 
   return (
     <div className="container">
